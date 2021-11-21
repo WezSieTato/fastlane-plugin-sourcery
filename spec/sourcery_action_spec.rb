@@ -1,7 +1,7 @@
 describe Fastlane::Actions::SourceryAction do
-  describe '#run' do
-    it 'prints a message' do
-      expect(Fastlane::UI).to receive(:message).with("The sourcery plugin is working!")
+  describe 'Sourcery action' do
+    it 'should run sourcery when params are empty' do
+      expect(Fastlane::Actions).to receive(:sh).with("sourcery")
 
       Fastlane::Actions::SourceryAction.run(nil)
     end

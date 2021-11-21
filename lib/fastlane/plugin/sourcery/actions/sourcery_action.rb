@@ -5,7 +5,7 @@ module Fastlane
   module Actions
     class SourceryAction < Action
       def self.run(params)
-        UI.message("The sourcery plugin is working!")
+        Actions.sh("sourcery")
       end
 
       def self.description
