@@ -1,11 +1,20 @@
-require 'fastlane/action'
-require_relative '../helper/sourcery_helper'
+require 'fastlane'
 
 module Fastlane
   module Actions
     class SourceryAction < Action
       def self.run(params)
-        Actions.sh("sourcery")
+        require 'shellwords'
+
+        cmd = []
+        cmd << "sourcery"
+        config = params[:config]
+        if config
+          cmd << "--config"
+          cmd << config
+        end
+
+        Actions.sh(Shellwords.join(cmd))
       end
 
       def self.description
@@ -27,11 +36,14 @@ module Fastlane
 
       def self.available_options
         [
-          # FastlaneCore::ConfigItem.new(key: :your_option,
-          #                         env_name: "SOURCERY_YOUR_OPTION",
-          #                      description: "A description of your option",
-          #                         optional: false,
-          #                             type: String)
+          FastlaneCore::ConfigItem.new(key: :config,
+                                  env_name: "SOURCERY_CONFIG",
+                               description: "Path to config file. File or Directory. See https://github.com/krzysztofzablocki/Sourcery#configuration-file",
+                                  optional: true,
+                                  type: String,
+                                  verify_block: proc do |value|
+                                    UI.user_error!("Couldn't find config path '#{File.expand_path(value)}'") unless File.exist?(value)
+                                  end)
         ]
       end
 
