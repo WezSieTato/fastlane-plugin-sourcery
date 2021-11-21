@@ -13,5 +13,19 @@ describe Fastlane::Actions::SourceryAction do
 
       ActionRunner.sourcery("config: 'non_existing_file.yml'")
     end
+
+    it 'should succed executable validation when file exist' do
+      expect(Fastlane::UI).not_to(receive(:user_error!))
+
+      ActionRunner.sourcery("executable: '../spec/fake_sourcery'")
+    end
+
+    it 'should fail executable validation when file exist' do
+      expect(Fastlane::UI)
+        .to receive(:user_error!)
+        .with(match("Couldn't find executable path"))
+
+      ActionRunner.sourcery("executable: 'non_existing_file'")
+    end
   end
 end

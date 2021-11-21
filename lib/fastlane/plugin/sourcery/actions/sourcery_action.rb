@@ -7,7 +7,7 @@ module Fastlane
         require 'shellwords'
 
         cmd = []
-        cmd << "sourcery"
+        cmd << (params[:executable] || "sourcery").dup
         config = params[:config]
         if config
           cmd << "--config"
@@ -36,6 +36,14 @@ module Fastlane
 
       def self.available_options
         [
+          FastlaneCore::ConfigItem.new(key: :executable,
+                                  env_name: "SOURCERY_EXECUTABLE",
+                               description: "Path to Sourcery executable. Defaults to Sourcery in your PATH",
+                                  optional: true,
+                                      type: String,
+                              verify_block: proc do |value|
+                                UI.user_error!("Couldn't find executable path '#{File.expand_path(value)}'") unless File.exist?(value)
+                              end),
           FastlaneCore::ConfigItem.new(key: :config,
                                   env_name: "SOURCERY_CONFIG",
                                description: "Path to config file. File or Directory. See https://github.com/krzysztofzablocki/Sourcery#configuration-file",

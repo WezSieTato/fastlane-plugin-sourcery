@@ -1,5 +1,11 @@
 describe Fastlane::Actions::SourceryAction do
   describe 'Sourcery action should run' do
+    it 'using proper executable' do
+      expect(Fastlane::Actions).to receive(:sh).with("../spec/fake_sourcery")
+
+      ActionRunner.sourcery("executable: '../spec/fake_sourcery'")
+    end
+
     it 'without parameter' do
       expect(Fastlane::Actions).to receive(:sh).with("sourcery")
 
