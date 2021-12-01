@@ -1,3 +1,9 @@
 lane :test do
-  sourcery
+  cocoapods(
+    podfile: "Sourcery-Example"
+  )
+  sourcery(
+    executable: "Sourcery-Example/Pods/Sourcery/bin/sourcery",
+    config: "Sourcery-Example/.sourcery.yml"
+  )
 end

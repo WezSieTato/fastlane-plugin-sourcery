@@ -6,7 +6,7 @@ describe Fastlane::Actions::SourceryAction do
       ActionRunner.sourcery("config: '../spec/.fake_sourcery.yml'")
     end
 
-    it 'should fail config validation when file exist' do
+    it 'should fail config validation when file not exist' do
       expect(Fastlane::UI)
         .to receive(:user_error!)
         .with(match("Couldn't find config path"))
@@ -20,7 +20,7 @@ describe Fastlane::Actions::SourceryAction do
       ActionRunner.sourcery("executable: '../spec/fake_sourcery'")
     end
 
-    it 'should fail executable validation when file exist' do
+    it 'should fail executable validation when file not exist' do
       expect(Fastlane::UI)
         .to receive(:user_error!)
         .with(match("Couldn't find executable path"))
