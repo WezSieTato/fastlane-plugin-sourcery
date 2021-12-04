@@ -20,6 +20,14 @@ Run sourcery with fastlane! [Sourcery](https://github.com/krzysztofzablocki/Sour
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
 
+Usage:
+```       
+sourcery(
+  executable: "Sourcery-Example/Pods/Sourcery/bin/sourcery",
+  config: "Sourcery-Example/.sourcery.yml"
+)
+```
+
 ## Run tests for this plugin
 
 To run both the tests, and code style validation, run

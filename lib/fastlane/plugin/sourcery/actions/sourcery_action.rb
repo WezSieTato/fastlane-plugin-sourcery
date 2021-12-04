@@ -25,9 +25,16 @@ module Fastlane
         ["Marcin Stepnowski"]
       end
 
-      def self.details
-        # Optional:
-        ""
+      def self.example_code
+        [
+          "sourcery",
+          "
+          sourcery(
+            executable: \"Sourcery-Example/Pods/Sourcery/bin/sourcery\",
+            config: \"Sourcery-Example/.sourcery.yml\"
+          )
+          "
+        ]
       end
 
       def self.available_options
