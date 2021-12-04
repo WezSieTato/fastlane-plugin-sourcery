@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'marcin.stepnowski@gmail.com'
 
   spec.summary       = "Sourcery is a code generator for Swift language, built on top of Apple's own SwiftSyntax. It extends the language abstractions to allow you to generate boilerplate code automatically."
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-sourcery"
+  spec.homepage      = "https://github.com/WezSieTato/fastlane-plugin-sourcery"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
@@ -18,12 +18,8 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 2.5'
 
-  # Don't add a dependency to fastlane or fastlane_re
-  # since this would cause a circular dependency
-
-  # spec.add_dependency 'your-dependency', '~> 1.0.0'
-
   spec.add_development_dependency('bundler')
+  spec.add_development_dependency('codecov')
   spec.add_development_dependency('fastlane', '>= 2.198.1')
   spec.add_development_dependency('pry')
   spec.add_development_dependency('rake')

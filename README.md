@@ -2,6 +2,7 @@
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-sourcery)
 ![Test](https://github.com/WezSieTato/fastlane-plugin-sourcery/workflows/Test/badge.svg)
+[![codecov](https://codecov.io/gh/WezSieTato/fastlane-plugin-sourcery/branch/master/graph/badge.svg)](https://codecov.io/gh/WezSieTato/fastlane-plugin-sourcery)
 
 
 ## Getting Started
