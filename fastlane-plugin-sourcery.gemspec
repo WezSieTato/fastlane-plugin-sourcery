@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.author        = 'Marcin Stepnowski'
   spec.email         = 'marcin.stepnowski@gmail.com'
 
-  spec.summary       = "Sourcery is a code generator for Swift language, built on top of Apple's own SwiftSyntax. It extends the language abstractions to allow you to generate boilerplate code automatically."
+  spec.summary       = "Run sourcery with fastlane! Sourcery is a code generator for Swift language, built on top of Apple's own SwiftSyntax. It extends the language abstractions to allow you to generate boilerplate code automatically."
   spec.homepage      = "https://github.com/WezSieTato/fastlane-plugin-sourcery"
   spec.license       = "MIT"
 
