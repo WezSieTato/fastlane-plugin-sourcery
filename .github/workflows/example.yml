@@ -9,14 +9,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Cache bundler gems
-      uses: actions/cache@v3.0.4
+      uses: actions/cache@v3.0.6
       with:
         path: vendor/bundle
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-gems-
     - name: Cache pods
-      uses: actions/cache@v3.0.4
+      uses: actions/cache@v3.0.6
       with:
         path: Sourcery-Example/Pods
         key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
