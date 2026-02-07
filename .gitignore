@@ -13,3 +13,5 @@ test-results
 Sourcery-Example/Pods
 .bundle
 vendor
+xcuserdata
+tools

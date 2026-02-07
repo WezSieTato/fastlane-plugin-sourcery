@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34CCB887B3207379DB00C8C5 /* Pods_Sourcery_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49752C023C6E494348990AB1 /* Pods_Sourcery_Example.framework */; };
 		CDE744371DFDBEE4008F034F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE744361DFDBEE4008F034F /* AppDelegate.swift */; };
 		CDE744391DFDBEE4008F034F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE744381DFDBEE4008F034F /* ViewController.swift */; };
 		CDE7443C1DFDBEE4008F034F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE7443A1DFDBEE4008F034F /* Main.storyboard */; };
@@ -17,8 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1EFEACB54B4325DABA1DBB07 /* Pods-Sourcery-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sourcery-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sourcery-Example/Pods-Sourcery-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		49752C023C6E494348990AB1 /* Pods_Sourcery_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sourcery_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE744331DFDBEE4008F034F /* Sourcery-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sourcery-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE744361DFDBEE4008F034F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE744381DFDBEE4008F034F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,7 +25,6 @@
 		CDE744421DFDBEE4008F034F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDE7444A1DFDBF1E008F034F /* Basic.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basic.generated.swift; sourceTree = "<group>"; };
 		CDE7444C1DFDBF1E008F034F /* Basic.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Basic.stencil; sourceTree = "<group>"; };
-		E4A9E5091819FB951D4B3A46 /* Pods-Sourcery-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sourcery-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sourcery-Example/Pods-Sourcery-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,30 +32,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34CCB887B3207379DB00C8C5 /* Pods_Sourcery_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A178E0EAA2A3D943868853A9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				49752C023C6E494348990AB1 /* Pods_Sourcery_Example.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A8996A44841590FAAE2A4932 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1EFEACB54B4325DABA1DBB07 /* Pods-Sourcery-Example.debug.xcconfig */,
-				E4A9E5091819FB951D4B3A46 /* Pods-Sourcery-Example.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CDE7442A1DFDBEE4008F034F = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +45,6 @@
 				CDE7444B1DFDBF1E008F034F /* Templates */,
 				CDE744351DFDBEE4008F034F /* Sourcery-Example */,
 				CDE744341DFDBEE4008F034F /* Products */,
-				A8996A44841590FAAE2A4932 /* Pods */,
-				A178E0EAA2A3D943868853A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,7 +92,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDE744451DFDBEE4008F034F /* Build configuration list for PBXNativeTarget "Sourcery-Example" */;
 			buildPhases = (
-				CF5282FB5B7BED7A23689E75 /* [CP] Check Pods Manifest.lock */,
 				CDE744481DFDBF02008F034F /* Sourcery */,
 				CDE7442F1DFDBEE4008F034F /* Sources */,
 				CDE744301DFDBEE4008F034F /* Frameworks */,
@@ -193,24 +168,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Sourcery/bin/sourcery\" --sources \"${SRCROOT}/Sourcery-Example\" --templates \"${SRCROOT}/Templates\" --output \"${SRCROOT}/CodeGenerated\"";
-		};
-		CF5282FB5B7BED7A23689E75 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Sourcery-Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -340,7 +297,6 @@
 		};
 		CDE744461DFDBEE4008F034F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EFEACB54B4325DABA1DBB07 /* Pods-Sourcery-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9XH89LE46J;
@@ -354,7 +310,6 @@
 		};
 		CDE744471DFDBEE4008F034F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4A9E5091819FB951D4B3A46 /* Pods-Sourcery-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9XH89LE46J;
