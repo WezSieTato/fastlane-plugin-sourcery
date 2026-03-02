@@ -3,8 +3,8 @@ require:
 - rubocop/require_tools
 - rubocop-performance
 AllCops:
-  TargetRubyVersion: 2.5
-  NewCops: enable
+  TargetRubyVersion: 3.2
+  NewCops: disable
   Include:
   - "**/*.rb"
   - "**/*file"
@@ -129,7 +129,7 @@ Lint/UnusedMethodArgument:
 Lint/ParenthesesAsGroupedExpression:
   Exclude:
   - "**/spec/**/*"
-Naming/PredicateName:
+Naming/PredicatePrefix:
   Enabled: false
 Style/PerlBackrefs:
   Enabled: false
@@ -160,7 +160,7 @@ Style/CollectionMethods:
   Enabled: false
 Style/MethodCallWithArgsParentheses:
   Enabled: true
-  IgnoredMethods:
+  AllowedMethods:
   - require
   - require_relative
   - fastlane_require

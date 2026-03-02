@@ -1,13 +1,11 @@
 $LOAD_PATH.unshift(File.expand_path('../lib', __dir__))
 
 require 'simplecov'
+require 'simplecov-lcov'
 
+SimpleCov::Formatter::LcovFormatter.config.report_with_single_file = true
+SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
 SimpleCov.start
-
-if ENV['CI'] == 'true'
-  require 'codecov'
-  SimpleCov.formatter = SimpleCov::Formatter::Codecov
-end
 
 module SpecHelper
 end
