@@ -23,8 +23,11 @@ Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plu
 
 Usage:
 ```       
+get_sourcery(
+  version: "2.1.2",
+  target_directory: "tools"
+)
 sourcery(
-  executable: "Sourcery-Example/Pods/Sourcery/bin/sourcery",
   config: "Sourcery-Example/.sourcery.yml"
 )
 ```
