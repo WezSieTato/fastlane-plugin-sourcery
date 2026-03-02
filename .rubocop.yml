@@ -3,8 +3,8 @@ require:
 - rubocop/require_tools
 - rubocop-performance
 AllCops:
-  TargetRubyVersion: 2.5
-  NewCops: enable
+  TargetRubyVersion: 3.2
+  NewCops: disable
   Include:
   - "**/*.rb"
   - "**/*file"
