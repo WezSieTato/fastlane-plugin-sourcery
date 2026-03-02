@@ -15,13 +15,6 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-gems-
-    - name: Cache pods
-      uses: actions/cache@v4
-      with:
-        path: Sourcery-Example/Pods
-        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-pods-
     - name: Bundler
       run: |
         bundle config path vendor/bundle
